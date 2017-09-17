@@ -1,0 +1,13 @@
+Problem 4:
+For getCourse(), and firstly I initiate a String array to save 4 courses. Then this function randomly select an Integer between 0 to 3 using java.util.Random as the array index, and return course name in String array with this index. I set this function as static one to avoid create an RandomHomework object in main(). So when we print the course name in main(), we only need to simply call static getCourse() function.
+
+Problem 5:
+There are 4 tests, at first 3 of them fail;
+1.n = 0;
+0 is nonnegative number, and f(0) should be 1. So I change 24 line from "if (n <= 0)" to "if (n < 0)".
+2.n = 2;
+The answer should be 2. So I change 26 line from "else if (n <= 2)" to "else if (n < 2)".
+3.n = 2;
+The answer should be 2, but current answer is 0. I changed the 29 line recursive function from "getFibTerm(n - 1) - getFibTerm(n - 2)" to "getFibTerm(n - 1) + getFibTerm(n - 1)".
+
+Problem 6:
