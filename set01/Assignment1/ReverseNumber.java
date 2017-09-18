@@ -7,28 +7,25 @@ import java.util.*;
 
 public class ReverseNumber {
 
-    public String getRevNum(InputStream systemIn) {
+    public long getRevNum(InputStream systemIn) {
         Scanner sc = new Scanner(systemIn);
-        String str = sc.nextLine();
-        if (str.equals("")) {
-            throw new IllegalArgumentException("There is no input argument");
-        }
+        int input;
+        long output = 0;
         try {
-            Integer.parseInt(str);
-        } catch (NumberFormatException ne) {
-            throw new IllegalArgumentException("Input number is in the wrong format");
+            input = sc.nextInt();
+        } catch (InputMismatchException e) {
+            throw new InputMismatchException("You input should be an integer.");
         }
-        char[] charSet = str.toCharArray();
-        StringBuilder sb = new StringBuilder();
-        if (charSet[0] == '-') sb.append('-');
-        for (int i = charSet.length - 1; i > 0; i--) {
-            sb.append(charSet[i]);
+        int absInput = Math.abs(input);
+        while (absInput != 0) {
+            output *= 10;
+            output += absInput % 10;
+            absInput /= 10;
         }
-        if (charSet[0] != '-') sb.append(charSet[0]);
-        return(sb.toString());
+        return output *= input < 0 ? -1 : 1;
     }
 
-    public String getRevNum() {
+    public long getRevNum() {
         return getRevNum(System.in);
     }
 

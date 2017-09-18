@@ -4,6 +4,9 @@ import Assignment1.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.io.ByteArrayInputStream;
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.*;
 
 
@@ -23,7 +26,7 @@ public class ReverseNumberTest {
      * Tests that ReverseNumber throws an IllegalArgumentException
      * for no input.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = NoSuchElementException.class)
     public void expectedIllegalArgumentException() {
         rn.getRevNum(new ByteArrayInputStream("\n".getBytes()));
     }
@@ -33,7 +36,7 @@ public class ReverseNumberTest {
      * for wrong-format input.
      */
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = InputMismatchException.class)
     public void expectedWrongFormatException() {
         rn.getRevNum(new ByteArrayInputStream("abc".getBytes()));
         //System.setIn(System.in);
@@ -55,14 +58,14 @@ public class ReverseNumberTest {
 
     @Test
     public void testNegativeInput() {
-        assertEquals("getRevNum(-12345)", "-54321", rn.getRevNum(new ByteArrayInputStream("-12345".getBytes())));
-        assertEquals("getRevNum(-10086)", "-68001", rn.getRevNum(new ByteArrayInputStream("-10086".getBytes())));
+        assertEquals("getRevNum(-5200)", -25, rn.getRevNum(new ByteArrayInputStream("-5200".getBytes())));
+        assertEquals("getRevNum(-10086)", -68001, rn.getRevNum(new ByteArrayInputStream("-10086".getBytes())));
     }
 
     @Test
     public void testNonnegativeInput() {
-        assertEquals("getRevNum(12345)", "54321", rn.getRevNum(new ByteArrayInputStream("12345".getBytes())));
-        assertEquals("getRevNum(61425999)", "99952416", rn.getRevNum(new ByteArrayInputStream("61425999".getBytes())));
-        assertEquals("getRevNum(1)", "1", rn.getRevNum(new ByteArrayInputStream("1".getBytes())));
+        assertEquals("getRevNum(2147483647)", 7463847412L, rn.getRevNum(new ByteArrayInputStream("2147483647".getBytes())));
+        assertEquals("getRevNum(98105)", 50189, rn.getRevNum(new ByteArrayInputStream("98105".getBytes())));
+        assertEquals("getRevNum(0)", 0, rn.getRevNum(new ByteArrayInputStream("0".getBytes())));
     }
 }

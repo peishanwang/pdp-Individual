@@ -10,20 +10,47 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/set01$ReverseNumber.coverage" NAME="ReverseNumber Coverage Results" MODIFIED="1505693108550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Assignment1.*</FILTER>
+    </SUITE>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="set01" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReverseNumber.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReverseNumber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assignment1/ReverseNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="-17">
+              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReverseNumberTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assignment1/test/ReverseNumberTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FibonacciTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assignment1/test/FibonacciTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="38" column="66" lean-forward="true" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,6 +82,7 @@
         <option value="$PROJECT_DIR$/Assignment1/Vehicle.java" />
         <option value="$PROJECT_DIR$/Assignment1/ScenicRoad.java" />
         <option value="$PROJECT_DIR$/Assignment1/ReverseNumber.java" />
+        <option value="$PROJECT_DIR$/Assignment1/test/ReverseNumberTest.java" />
       </list>
     </option>
   </component>
@@ -105,7 +133,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment1.test" />
+              <option name="myItemId" value="Assignment1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -120,6 +148,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Assignment1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -146,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReverseNumber">
+  <component name="RunManager" selected="JUnit.ReverseNumberTest">
     <configuration default="false" name="ReverseNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -484,11 +516,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ReverseNumber" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.VehicleTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FibonacciTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FibonacciTest.expectedIllegalArgumentException" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ReverseNumberTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ReverseNumberTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ReverseNumber" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.VehicleTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FibonacciTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FibonacciTest.expectedIllegalArgumentException" />
       </list>
     </recent_temporary>
   </component>
@@ -506,26 +538,26 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 30m 40s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 16h 59m 11s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 34m 00s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 17h 00m 41s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 35m 06s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 17h 01m 57s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 35m 24s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 17h 04m 51s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 35m 36s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 17h 05m 41s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 36m 30s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 17h 06m 32s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FibonacciTest_expectedIllegalArgumentException - 2017.09.14 at 15h 37m 01s.xml">
-      <configuration name="FibonacciTest.expectedIllegalArgumentException" configurationId="JUnit" />
+    <history-entry file="ReverseNumberTest - 2017.09.17 at 17h 06m 49s.xml">
+      <configuration name="ReverseNumberTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="VehicleTest - 2017.09.14 at 15h 49m 13s.xml">
       <configuration name="VehicleTest" configurationId="JUnit" />
@@ -560,7 +592,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31861198" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31861198" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -614,9 +647,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -625,8 +656,8 @@
         <state relative-caret-position="765">
           <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding>
-            <element signature="e#1548#1549#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="false" />
+            <element signature="e#1576#1577#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -643,9 +674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,8 +713,8 @@
         <state relative-caret-position="517">
           <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding>
-            <element signature="e#1548#1549#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="false" />
+            <element signature="e#1576#1577#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -702,9 +731,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -716,13 +743,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assignment1/ReverseNumber.java">
+    <entry file="file://$PROJECT_DIR$/Assignment1/test/VehicleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="17">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/test/FibonacciTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="38" column="66" lean-forward="true" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/ReverseNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assignment1/test/ReverseNumberTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
