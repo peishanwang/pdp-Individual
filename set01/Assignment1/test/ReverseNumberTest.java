@@ -27,7 +27,7 @@ public class ReverseNumberTest {
      * for no input.
      */
     @Test(expected = NoSuchElementException.class)
-    public void expectedIllegalArgumentException() {
+    public void expectedNoElementException() {
         rn.getRevNum(new ByteArrayInputStream("\n".getBytes()));
     }
 
@@ -37,7 +37,7 @@ public class ReverseNumberTest {
      */
 
     @Test(expected = InputMismatchException.class)
-    public void expectedWrongFormatException() {
+    public void expectedInputMismatchException() {
         rn.getRevNum(new ByteArrayInputStream("abc".getBytes()));
         //System.setIn(System.in);
     }
@@ -46,15 +46,6 @@ public class ReverseNumberTest {
      * Tests that ReverseNumber throws no IllegalArgumentException
      * for Integer input.
      */
-    @Test
-    public void testThrowsIllegalArgumentException() {
-        try {
-            rn.getRevNum(new ByteArrayInputStream("12345".getBytes()));
-        } catch (IllegalArgumentException ex) {
-            fail("Threw IllegalArgumentException for 12345 but 12345 is legal input: "
-                    + ex);
-        }
-    }
 
     @Test
     public void testNegativeInput() {

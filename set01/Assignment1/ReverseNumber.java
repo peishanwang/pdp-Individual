@@ -14,7 +14,7 @@ public class ReverseNumber {
         try {
             input = sc.nextInt();
         } catch (InputMismatchException e) {
-            throw new InputMismatchException("You input should be an integer.");
+            throw new InputMismatchException("Your input should be an integer.");
         }
         int absInput = Math.abs(input);
         while (absInput != 0) {
