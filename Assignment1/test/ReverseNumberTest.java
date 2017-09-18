@@ -11,7 +11,14 @@ import static org.junit.Assert.*;
 
 
 /**
- * Created by peishan on 2017/9/13.
+ * ReverseNumberTest is a glassbox test of the Fibonacci class.
+ *
+ * Using ReverseNumber we can reverse an integer. And the output might not be an integer.
+ * When the input is negative, output must be negative too. The same rule applies for non-negative input.
+ *
+ * When the input integer have trailing zeros, we eliminate the leading zeros after reverse it.
+ *
+ * @see Assignment1.ReverseNumber
  */
 public class ReverseNumberTest {
     private static ReverseNumber rn = null;
@@ -35,7 +42,6 @@ public class ReverseNumberTest {
      * Tests that ReverseNumber throws an IllegalArgumentException
      * for wrong-format input.
      */
-
     @Test(expected = InputMismatchException.class)
     public void expectedInputMismatchException() {
         rn.getRevNum(new ByteArrayInputStream("abc".getBytes()));
@@ -43,16 +49,17 @@ public class ReverseNumberTest {
     }
 
     /**
-     * Tests that ReverseNumber throws no IllegalArgumentException
-     * for Integer input.
+     * Tests to see ReverseNumber returns the correct value for negative integer input.
      */
-
     @Test
     public void testNegativeInput() {
         assertEquals("getRevNum(-5200)", -25, rn.getRevNum(new ByteArrayInputStream("-5200".getBytes())));
         assertEquals("getRevNum(-10086)", -68001, rn.getRevNum(new ByteArrayInputStream("-10086".getBytes())));
     }
 
+    /**
+     * Tests to see ReverseNumber returns the correct value for non-negative integer input.
+     */
     @Test
     public void testNonnegativeInput() {
         assertEquals("getRevNum(2147483647)", 7463847412L, rn.getRevNum(new ByteArrayInputStream("2147483647".getBytes())));

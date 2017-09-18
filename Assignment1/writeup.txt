@@ -1,0 +1,55 @@
+Problem 4:
+For getCourse(), and firstly I initiate a String array to save 4 courses. Then this function randomly select an Integer between 0 to 3 using java.util.Random as the array index, and return course name in String array with this index. I set this function as static one to avoid create an RandomHomework object in main(). So when we print the course name in main(), we only need to simply call static getCourse() function.
+
+Problem 5:
+There are 4 tests, at first 3 of them fail;
+1.n = 0;
+0 is nonnegative number, and f(0) should be 1. So I change 24 line from "if (n <= 0)" to "if (n < 0)".
+2.n = 2;
+The answer should be 2. So I change 26 line from "else if (n <= 2)" to "else if (n < 2)".
+3.n = 2;
+The answer should be 2, but current answer is 0. I changed the 29 line recursive function from "getFibTerm(n - 1) - getFibTerm(n - 2)" to "getFibTerm(n - 1) + getFibTerm(n - 1)".
+
+Problem 6:
+ReverseNumber:
+To reverse a number, the user should first input an integer. I use sc.nextInt() to determine whether the user's input is legal. For the largest integer, it will be larger than the maximum value of integer. So we need to return a long number as output. To simplify the question, we first deal with the situation of the absolute value of input. After reversing the absolute value, we multiply -1 and current result for negative input to get the final answer.
+
+ReverseNumberTest:
+To test the ReverseNumber, ReverseNumberTest contain the following part:
+1.If there is no input element from input stream, ReverseNumber throws NoSuchElementException.
+2.If the input is in wrong format( like letters), ReverseNumber throws expectedInputMismatchException by nextInt();
+3,Tests to see ReverseNumber returns the correct value for negative integer input.
+4.Tests to see ReverseNumber returns the correct value for negative integer input.
+
+Problem 7:
+Vehicle:
+When providing no parameters or only one parameter to the constructor, throw IllegalArgumentException. When the velocity of a Vehicle is negative, we regard it as opposite direction bounding, and set its velocity to the absolute value.
+
+VehicleTest:
+The tests contains two part:
+1. If the parameters provided to Vehicle constructor are not illegal, Vehicle throws IllegalArgumentException.
+2. Tests to see Vehicle's variable accords with the parameters provided to the constructor.
+
+Highway:
+To implement the getVelocityEastbond()/getVelocityWestbound() functions, I think the better way is finding the velocity of the slowest vehicle every time when the function is called. The reason is keeping track of the slowest velocity spends O(n) time each time add()/ remove() is called while finding the velocity of the slowest vehicle every time function getVelocityEastbond()/getVelocityWestbound() is called costs O(nlgn). On a highway, the number of vehicles might be large and changes of vehicles might be frequent. So it is time consuming if we keep track of the slowest vehicle. I add a function findSlowest to calculate the slowest vehicle when getVelocityEastbond()/getVelocityWestbound() is called because their fuction is similar and no need to write the code twice.
+
+For numberVehiclesEastbound() and numberVehiclesWestbounds(), I think it would be better we keep track of the current east bounding/ west bounding vehicles using the private variable eastBound and westBound. Keeping track of numbers of east bounding/ west bounding vehicles only takes O(1) time every time add/ remove is called. Or we need to spend O(n) time every time numberVehiclesEastbound() or numberVehiclesWestbounds() is called.
+
+HighwayTest:
+We need to specify the order of the tests in HighwayTest to predict the test result, so we use MethodSorters.NAME_ASCENDING. We can infer that iterator() works well if getVelocityEastbound(), getVelocityWestbound() works.
+
+ScenicRoad:
+We set the bandwidth of ScenicRoad while create new ScenicRoad object, and revised the add() function to set the velocity of vehicles when there is a jam. Other methods in ScenicRoad can simply delegate to the equivalent in Highway.
+
+ScenicRoadTest:
+ScenicRoadTest tests the add() both when adding a new vehicle will not cause a jam and adding one will cause a jam. It also tests all other functions in ScenicRoad.
+
+
+
+
+
+
+
+
+
+

@@ -11,19 +11,28 @@ public class Vehicle {
 
    private double velocity;
    private int direction;
-   
+
     /**
-     * Constructor that creates a new vehicle object with the specified velocity and direction.
-     * @param velocity Velocity of the new object.
-     * @param direction Direction of the new object, where 1 represents eastbound direction, and 2 westbound direction.
+     * Constructor that throws IllegalArgumentException when no parameter is provided
+     * to the constructor.
      */
     public Vehicle() throws IllegalArgumentException {
         throw new IllegalArgumentException("This constructor has two arguments");
     }
 
+    /**
+     * Constructor that throws IllegalArgumentException when only onecouble parameter
+     * is provided to the constructor.
+     */
     public Vehicle(double num) throws IllegalArgumentException {
         throw new IllegalArgumentException("Your argument is in wrong format");
     }
+
+    /**
+     * Constructor that creates a new vehicle object with the specified velocity and direction.
+     * @param velocity Velocity of the new object.
+     * @param direction Direction of the new object, where 1 represents eastbound direction, and 2 westbound direction.
+     */
     public Vehicle(double velocity, int direction) throws IllegalArgumentException {
         if (direction != 1 && direction != 2) {
             throw  new IllegalArgumentException("direction must be 1 or 2");
@@ -44,8 +53,21 @@ public class Vehicle {
     public double getVelocity() {
         return velocity;
     }
+
+    /**
+     * Set the velocity of the Vehicle.
+     * If the new velocity is negative, change the direction of the vehicle
+     * and set the velocity to the absolute value.
+     *
+     * @param v the velocity of the Vehicle.
+     */
     public void setVelocity(double v) {
-        velocity = v;
+        if (v < 0) {
+            direction = direction == 1 ? 2 : 1;
+            velocity = Math.abs(v);
+        } else {
+            velocity = v;
+        }
     }
 
     /**

@@ -91,7 +91,6 @@ public class Highway implements Iterable<Vehicle> {
      * @return the velocity of the slowest eastbound vehicle
      */
     public double getVelocityEastbound() {
-        // Your code goes here.  Remove the exception after you're done.
         if (eastBound == 0) return 0.0;
         return findSlowest(1);
     }
@@ -133,6 +132,12 @@ public class Highway implements Iterable<Vehicle> {
        return contents.contains(v);
     }
 
+    /**
+     * This method returns the lowest velocity of vehicles in the input direction.
+     * @param direction 1 means east bounding, 2 means west bounding
+     * @requires dirction == 1 or direction == 2.
+     * @return the lowest velocity of vehicles in the input direction
+     */
     private Double findSlowest(int direction) {
         List<Vehicle> list = new ArrayList<>(contents);
         Collections.sort(list, (a, b) -> Double.compare(a.getVelocity(),b.getVelocity()));

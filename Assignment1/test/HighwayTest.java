@@ -8,7 +8,17 @@ import org.junit.runners.MethodSorters;
 import static org.junit.Assert.*;
 
 /**
- * Created by peishan on 2017/9/17.
+ * HighwayTest tests the correctness of the functions in Highway.
+ *
+ * @see Assignment1.Highway
+ *
+ * @author Peishan Wang
+ */
+
+
+/**
+ * We use only one Highway object in the whole HighwayTest, thus we need to specify the test order.
+ * We cannot predict the result if we don't know the order of tests execution.
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class HighwayTest {
@@ -19,6 +29,10 @@ public class HighwayTest {
         highway = new Highway();
     }
 
+    /**
+     * Test the function add(), getVelocityEastbound(), getVelocityWestbound(),
+     * numberVehiclesEastbound(), numberVehiclesWestbound().
+     */
     @Test
     public void test1() {
         highway.add(new Vehicle(18.00, 2));
@@ -31,6 +45,9 @@ public class HighwayTest {
         assertEquals("get west bound number", 2, highway.numberVehiclesWestbound());
     }
 
+    /**
+     * Test the function add(), remove(), contains().
+     */
     @Test
     public void test2() {
         Vehicle v = new Vehicle(25, 1);
