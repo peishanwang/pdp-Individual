@@ -20,19 +20,21 @@ public class Vehicle {
     public Vehicle() throws IllegalArgumentException {
         throw new IllegalArgumentException("This constructor has two arguments");
     }
+
     public Vehicle(double num) throws IllegalArgumentException {
         throw new IllegalArgumentException("Your argument is in wrong format");
     }
     public Vehicle(double velocity, int direction) throws IllegalArgumentException {
-        if (velocity < 0.0) {
-            throw new IllegalArgumentException("velocity must be non-negative number");
-        }
-
         if (direction != 1 && direction != 2) {
             throw  new IllegalArgumentException("direction must be 1 or 2");
         }
-        this.velocity = velocity;
-        this.direction = direction;
+        if (velocity < 0.0) {
+            this.direction = direction == 1 ? 2 : 1;
+            this.velocity = Math.abs(velocity);
+        } else {
+            this.velocity = velocity;
+            this.direction = direction;
+        }
     }
 
     /**
@@ -46,12 +48,11 @@ public class Vehicle {
         velocity = v;
     }
 
-
     /**
      * Returns the direction of the Vehicle.
      * @return the direction of the Vehicle.
      */
-    public double getDirection() {
+    public int getDirection() {
         return direction;
     }
 

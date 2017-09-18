@@ -134,7 +134,7 @@ public class Highway implements Iterable<Vehicle> {
     }
 
     private Double findSlowest(int direction) {
-        List<Vehicle> list = new ArrayList<>();
+        List<Vehicle> list = new ArrayList<>(contents);
         Collections.sort(list, (a, b) -> Double.compare(a.getVelocity(),b.getVelocity()));
         int index = 0;
         while (list.get(index).getDirection() != direction) index++;
