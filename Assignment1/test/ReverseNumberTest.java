@@ -11,11 +11,12 @@ import static org.junit.Assert.*;
 
 
 /**
- * ReverseNumberTest is a glassbox test of the Fibonacci class.
+ * ReverseNumberTest is a glassbox test of the ReverseNumber class.
  *
- * Using ReverseNumber we can reverse an integer. And the output might not be an integer.
+ * Using ReverseNumber we can reverse an integer. And the output might not be an integer. Thus, the
+ * output is a Long.
+ *
  * When the input is negative, output must be negative too. The same rule applies for non-negative input.
- *
  * When the input integer have trailing zeros, we eliminate the leading zeros after reverse it.
  *
  * @see Assignment1.ReverseNumber

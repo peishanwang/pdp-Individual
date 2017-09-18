@@ -26,7 +26,7 @@ Vehicle:
 When providing no parameters or only one parameter to the constructor, throw IllegalArgumentException. When the velocity of a Vehicle is negative, we regard it as opposite direction bounding, and set its velocity to the absolute value.
 
 VehicleTest:
-The tests contains two part:
+The tests contains two parts:
 1. If the parameters provided to Vehicle constructor are not illegal, Vehicle throws IllegalArgumentException.
 2. Tests to see Vehicle's variable accords with the parameters provided to the constructor.
 

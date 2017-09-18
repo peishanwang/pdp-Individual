@@ -42,7 +42,6 @@ public class ReverseNumber {
      * Calculates the reverse number of an integer.
      *
      * @return the reversed number of the input integer received from user's input in console
-     * @throws InputMismatchException if input is not an integer
      */
     public long getRevNum() {
         System.out.println("Please enter an integer :");
@@ -51,7 +50,6 @@ public class ReverseNumber {
 
     /**
      * Call the reverse number function and print the result
-     *
      */
     public static void main(String args[]) {
         ReverseNumber rn = new ReverseNumber();

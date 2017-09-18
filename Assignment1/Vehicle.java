@@ -13,7 +13,7 @@ public class Vehicle {
    private int direction;
 
     /**
-     * Constructor that throws IllegalArgumentException when no parameter is provided
+     * Constructor throws IllegalArgumentException when no parameter is provided
      * to the constructor.
      */
     public Vehicle() throws IllegalArgumentException {
@@ -21,7 +21,7 @@ public class Vehicle {
     }
 
     /**
-     * Constructor that throws IllegalArgumentException when only onecouble parameter
+     * Constructor throws IllegalArgumentException when only one double parameter
      * is provided to the constructor.
      */
     public Vehicle(double num) throws IllegalArgumentException {
