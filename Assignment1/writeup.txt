@@ -12,14 +12,14 @@ The answer should be 2, but current answer is 0. I changed the 29 line recursive
 
 Problem 6:
 ReverseNumber:
-To reverse a number, the user should first input an integer. I use sc.nextInt() to determine whether the user's input is legal. For the largest integer, it will be larger than the maximum value of integer. So we need to return a long number as output. To simplify the question, we first deal with the situation of the absolute value of input. After reversing the absolute value, we multiply -1 and current result for negative input to get the final answer.
+To reverse a number, the user should first input an integer. I use sc.nextInt() to determine whether the user's input is legal. For the largest integer, its reverse number will be larger than the maximum value of integer. So we need to return a long number as output. To simplify the question, we first deal with the situation of the absolute value of input. After reversing the absolute value, we multiply -1 and current result for negative input to get the final answer.
 
 ReverseNumberTest:
 To test the ReverseNumber, ReverseNumberTest contain the following part:
 1.If there is no input element from input stream, ReverseNumber throws NoSuchElementException.
 2.If the input is in wrong format( like letters), ReverseNumber throws expectedInputMismatchException by nextInt();
 3,Tests to see ReverseNumber returns the correct value for negative integer input.
-4.Tests to see ReverseNumber returns the correct value for negative integer input.
+4.Tests to see ReverseNumber returns the correct value for non-negative integer input.
 
 Problem 7:
 Vehicle:
@@ -44,6 +44,16 @@ We set the bandwidth of ScenicRoad while create new ScenicRoad object, and revis
 ScenicRoadTest:
 ScenicRoadTest tests the add() both when adding a new vehicle will not cause a jam and adding one will cause a jam. It also tests all other functions in ScenicRoad.
 
+
+1.reverse number
+integer as field
+no parameter delete()
+while until get integer
+
+2.Highway
+sort -> min
+name of eastbound/westbound
+use CONSTANT
 
 
 
