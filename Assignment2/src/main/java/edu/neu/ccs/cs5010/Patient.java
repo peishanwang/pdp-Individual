@@ -8,7 +8,7 @@ import java.util.Random;
  * patient arrival time, treatment start time, treatment duration(minutes) and
  * urgency level.
  */
-public class Patient implements Comparable {
+public class Patient implements Comparable, IPatient {
     private LocalDateTime arrivalTime;
     private LocalDateTime treatmentStart;
     private int treatmentMinutes;

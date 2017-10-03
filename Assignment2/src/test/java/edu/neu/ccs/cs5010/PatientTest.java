@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
  * @see Patient
  */
 public class PatientTest {
-    private Patient presetPatient = new Patient(10);
-    private Patient randomPatient = new Patient();
+    private IPatient presetPatient = new Patient(10);
+    private IPatient randomPatient = new Patient();
 
     //test preset patient
     @Test

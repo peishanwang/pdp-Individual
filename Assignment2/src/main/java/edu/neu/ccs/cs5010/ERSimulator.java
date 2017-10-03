@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class ERSimulator {
 
-    private EmergencyRoom er;
+    private IEmergencyRoom er;
     private LocalDateTime startTime;
     private LocalDateTime genEndTime;
     private LocalDateTime simEndTime;
@@ -26,7 +26,7 @@ public class ERSimulator {
     /**
      * Generate patients randomly
      */
-    public void generateRandomPatients() {
+    private void generateRandomPatients() {
         while (LocalDateTime.now().isBefore(genEndTime)) {
             int gapMinutes = 1 + random.nextInt(20);
             try{
@@ -44,7 +44,7 @@ public class ERSimulator {
     /**
      * Generate preset patients
      */
-    public void generatePresetPatients(int preIntervalMins, int preDurationMins) {
+    private void generatePresetPatients(int preIntervalMins, int preDurationMins) {
         while (LocalDateTime.now().isBefore(genEndTime)) {
             try{
                 Thread.sleep(preIntervalMins * 1000);
@@ -174,7 +174,6 @@ public class ERSimulator {
         //7.Busy time percentage of each examination room
         System.out.println("7.Busy time percentage of each examination room: ");
         printBusyEachRoom(examRooms, totalMinutes);
-        System.out.println(totalMinutes + " totalMinutes");
     }
 
     public static void main(String[] args) {
@@ -199,7 +198,6 @@ public class ERSimulator {
             System.out.print("\t\tRoom" + (i + 1) +": ");
             System.out.print(examRooms.get(i).getTotalBusyMinutes() * 100.00 / totalTime);
             System.out.println("%");
-            System.out.println(examRooms.get(i).getTotalBusyMinutes() + "totalBusy");
         }
     }
 

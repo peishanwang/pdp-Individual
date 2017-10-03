@@ -12,7 +12,7 @@ import java.util.List;
  * @see EmergencyRoom
  */
 public class EmergencyRoomTest {
-    private EmergencyRoom emr = new EmergencyRoom(3);
+    private IEmergencyRoom emr = new EmergencyRoom(3);
 
     @Test
     //test waiting queue

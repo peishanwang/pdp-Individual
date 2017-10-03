@@ -1,5 +1,6 @@
 package edu.neu.ccs.cs5010;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -12,7 +13,7 @@ public class ERSimulatorTest {
 
     @Test
     public void test() {
-
+        ers.runSimulation();
     }
 
 }

@@ -20,6 +20,13 @@ public class PriorityQueueTest {
             testPQ.insert(num);
             myList.add(num);
         }
+        //test getSize
+        Assert.assertEquals(9, testPQ.getSize());
+
+        //test getQueue
+        Assert.assertEquals(myList.get(0), testPQ.getQueue()[0]);
+
+
         //test forward traversal
         Collections.sort(myList);
         Assert.assertEquals(myList, testPQ.testForwardTraversal());
@@ -36,6 +43,9 @@ public class PriorityQueueTest {
         Assert.assertEquals(new Integer(3), testPQ.front());
         Assert.assertEquals(new Integer(3), testPQ.remove());
         Assert.assertEquals(new Integer(4), testPQ.front());
+
+        //test isEmpty
+        Assert.assertEquals(false, testPQ.isEmpty());
 
     }
 }

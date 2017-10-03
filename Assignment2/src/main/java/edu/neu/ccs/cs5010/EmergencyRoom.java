@@ -10,7 +10,7 @@ import java.util.List;
  * examination rooms.
  *
  */
-public class EmergencyRoom {
+public class EmergencyRoom implements IEmergencyRoom{
     private final int numberOfRooms;
     private IPriorityQueue<Patient> waitingQueue;
     private IPriorityQueue<ExamRoom> emptyRooms;
