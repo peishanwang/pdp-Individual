@@ -5,10 +5,13 @@ package edu.neu.ccs.cs5010;
  * This interface captures Queue ADT
  */
 public interface IQueue {
-    IQueue enqueue(int elt);
-    IQueue dequeue();
-    int front();
-    boolean isEmpty();
+  IQueue enqueue(int elt);
+
+  IQueue dequeue();
+
+  int front();
+
+  boolean isEmpty();
 
 }
 

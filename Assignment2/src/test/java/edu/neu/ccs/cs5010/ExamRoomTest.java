@@ -11,21 +11,24 @@ import java.time.LocalDateTime;
  * @see ExamRoom
  */
 public class ExamRoomTest {
-    private ExamRoom er = new ExamRoom(1);
 
-    //test ExamRoom
-    @Test
-    public void testExamRoom() {
-        Assert.assertEquals(LocalDateTime.MAX, er.getDepartureTime());
-        Assert.assertEquals(1, er.getRoomNumber());
-        Assert.assertEquals(0, er.getTotalBusyMinutes());
-        Assert.assertEquals(0, er.getTotalPatients());
-        er.addTotalPatients();
-        er.addTotalBusyMinutes(10);
-        LocalDateTime current = LocalDateTime.now();
-        er.setDepartureTime(current);
-        Assert.assertEquals(current, er.getDepartureTime());
-        Assert.assertEquals(10, er.getTotalBusyMinutes());
-        Assert.assertEquals(1, er.getTotalPatients());
-    }
+  @Test
+  public void testCompareTo() {
+    ExamRoom er1 = new ExamRoom(1);
+    ExamRoom er2 = new ExamRoom(2);
+    ExamRoom er3 = new ExamRoom(3);
+    ExamRoom er4 = new ExamRoom(3);
+    er1.addTotalBusyMinutes(4);
+    Assert.assertEquals(er1.compareTo(er2), 1);
+    Assert.assertEquals(er2.compareTo(er1), -1);
+    Assert.assertEquals(er4.compareTo(er3), 0);
+    Assert.assertEquals(er2.compareTo(er3), -1);
+    Assert.assertEquals(er3.compareTo(er2), 1);
+  }
+
+  @Test(expected = NullPointerException.class)
+  public void testException() {
+    ExamRoom er1 = new ExamRoom(1);
+    er1.compareTo(null);
+  }
 }

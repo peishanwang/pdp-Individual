@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -78,7 +79,7 @@ public class EmergencyRoomTest {
     //test room list
     public void test4() {
         Assert.assertEquals(3, emr.getNumberOfRooms());
-        List<ExamRoom> roomList= new MyLinkedList();
+        List<ExamRoom> roomList= new ArrayList<>();
         ExamRoom eer1 = emr.removeEmptyRooms();
         ExamRoom eer2 = emr.removeEmptyRooms();
         ExamRoom eer3 = emr.removeEmptyRooms();
@@ -91,7 +92,7 @@ public class EmergencyRoomTest {
     @Test
     //test patient list
     public void test5() {
-        List<Patient> patientList = new MyLinkedList<>();
+        List<Patient> patientList = new ArrayList<>();
         Patient p1 = new Patient();
         Patient p2 = new Patient();
         Patient p3 = new Patient();
