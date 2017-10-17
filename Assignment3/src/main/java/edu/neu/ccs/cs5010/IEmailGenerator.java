@@ -1,15 +1,12 @@
 package edu.neu.ccs.cs5010;
 
 /**
- * IEmailGenerator is used to generate a email by importing email-template,
- * customers' data, output directory, and event.
+ * IEmailGenerator is used to generate new emails using template and evaluator.
  */
 public interface IEmailGenerator{
   /**
-   * Generate emails and save them to output directory or send them as actual Email.
-   * @param outputType If outputType is 0, the new Emails will be saved to assigned
-   *                   output directory. If outputType is 1, the new Emails will be
-   *                   sent through gmail.
+   * Generate emails and handle them.
+   *
    */
-  void generateEmail(int outputType);
+  void generateEmail();
 }

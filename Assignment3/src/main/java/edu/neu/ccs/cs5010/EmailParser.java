@@ -4,35 +4,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * EmailFormat can separately store the information for writing an email
+ * EmailParser can separately store the information for writing an email.
  */
-public class EmailFormat implements IEmailFormat{
+public class EmailParser implements IEmailParser {
   private String receiver;
   private String subject;
   private String senderName;
   private List<String> text;
-  private final static int SUBJECT_START = 9;
-  private final static int TO_START = 4;
+  private static final int SUBJECT_START = 9;
+  private static final int TO_START = 4;
 
   /**
-   * Constructor of EmailFormat with one parameter, default sender's nickname is "sender".
+   * Constructor of EmailParser with one parameter, default sender's nickname is "sender".
    * @param info email's information
    */
-  public EmailFormat(List<String> info) {
+  public EmailParser(List<String> info) {
     this("sender", info);
   }
 
   /**
-   * Constructor of EmailFormat with two parameters
+   * Constructor of EmailParser with two parameters
    * @param senderName sender's nickname
    * @param info email's information
    */
-  public EmailFormat(String senderName, List<String> info) {
+  public EmailParser(String senderName, List<String> info) {
     receiver = "";
     subject = "";
     text = new ArrayList<>();
     this.senderName = senderName;
-    int size = info.size(), textLine = Integer.MAX_VALUE;
+    int size = info.size();
+    int textLine = Integer.MAX_VALUE;
     for (int i = 0; i < size; i++) {
       String line = info.get(i);
       if (line.startsWith("To:")) {

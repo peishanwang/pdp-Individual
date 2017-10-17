@@ -18,12 +18,11 @@ public class EmailSender {
 
   /**
    * Send Email.
-   * @param email Email information in EmailFormat.
+   * @param email Email information in EmailParser.
+   * @param address mailbox address
+   * @param password mailbox password
    */
-  public static void sendEmail(IEmailFormat email) {
-
-    final String username = "sandrapswang@gmail.com";
-    final String password = "wps19940723";
+  public static void sendEmail(IEmailParser email, String address, String password) {
 
     Properties props = new Properties();
     props.put("mail.smtp.starttls.enable", "true");
@@ -34,13 +33,13 @@ public class EmailSender {
     Session session = Session.getInstance(props,
         new javax.mail.Authenticator() {
           protected PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication(username, password);
+            return new PasswordAuthentication(address, password);
           }
         });
 
     try {
       Message message = new MimeMessage(session);
-      message.setFrom(new InternetAddress("sandrapswang@gmail.com", email.getSenderName()));
+      message.setFrom(new InternetAddress(address, email.getSenderName()));
       message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email.getReceiver()));
       message.setSubject(email.getSubject());
       StringBuilder sb = new StringBuilder();

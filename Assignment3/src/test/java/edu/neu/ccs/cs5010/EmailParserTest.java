@@ -7,8 +7,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmailFormatTest {
-  private IEmailFormat ef;
+public class EmailParserTest {
+  private IEmailParser ef;
   List<String> text;
 
   @Before
@@ -35,7 +35,7 @@ public class EmailFormatTest {
     text.add("OnTime airline customer service ");
 
 
-    ef = new EmailFormat("tester",email);
+    ef = new EmailParser("tester",email);
   }
 
   @Test

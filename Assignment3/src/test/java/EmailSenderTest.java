@@ -1,8 +1,11 @@
-package edu.neu.ccs.cs5010;
-
+import edu.neu.ccs.cs5010.EmailParser;
+import edu.neu.ccs.cs5010.EmailSender;
+import edu.neu.ccs.cs5010.IEmailParser;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.mail.AuthenticationFailedException;
+import javax.mail.MessagingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +13,7 @@ import java.util.List;
  * Created by peishan on 2017/10/8.
  */
 public class EmailSenderTest {
-  EmailFormat email;
+  IEmailParser email;
 
   @Before
   public void before() {
@@ -25,11 +28,11 @@ public class EmailSenderTest {
     input.add("Sincerely,");
     input.add("Myself");
 
-    email = new EmailFormat("myself", input);
+    email = new EmailParser("myself", input);
   }
 
-  @Test
+  @Test(expected = RuntimeException.class)
   public void testSendEmail() {
-    EmailSender.sendEmail(email);
+    EmailSender.sendEmail(email, "00", "11");
   }
 }

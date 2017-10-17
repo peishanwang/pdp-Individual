@@ -3,9 +3,9 @@ package edu.neu.ccs.cs5010;
 import java.util.List;
 
 /**
- * IEmailFormat can separately store the information for writing an email
+ * IEmailParser can separately store the information for writing an email
  */
-public interface IEmailFormat {
+public interface IEmailParser {
   /**
    * Returns receiver's email address
    * @return receiver's email address
