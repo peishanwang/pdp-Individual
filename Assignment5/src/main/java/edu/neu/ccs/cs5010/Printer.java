@@ -1,10 +1,11 @@
 package edu.neu.ccs.cs5010;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+
 
 /**
  * Printer is used to print result to console.
@@ -52,24 +53,19 @@ public class Printer implements IPrinter {
   private void checkRepeated() {
     int count = 0;
     HashMap<String, Integer> idToTimes = new HashMap<>();
-    HashMap<List<BigInteger>, List<String>> pkToId = new HashMap<>();
+    HashMap<List<BigInteger>, HashSet<String>> pkToId = new HashMap<>();
     for (IMessagePair messagePair : messagePairs) {
       IClient currClient = messagePair.getClient();
       idToTimes.put(currClient.getClientId(),
           idToTimes.getOrDefault(currClient.getClientId(), 0));
-      pkToId.getOrDefault(currClient.getPublicKey(),
-          new ArrayList<>()).add(currClient.getClientId());
+      if (!pkToId.containsKey(currClient.getPublicKey())) {
+        pkToId.put(currClient.getPublicKey(), new HashSet<>());
+      }
+      pkToId.get(currClient.getPublicKey()).add(currClient.getClientId());
     }
-    for (List<String> ids : pkToId.values()) {
+    for (HashSet<String> ids : pkToId.values()) {
       if (ids.size() > 1) {
         System.out.println("These clients have the same public key: ");
-        for (int i = 0; i < ids.size(); i++) {
-          System.out.print(ids.get(i));
-          if (i != ids.size() - 1) {
-            System.out.print(", ");
-          }
-        }
-        System.out.println();
         for (String id : ids) {
           System.out.print(id + ": " + idToTimes.get(id) + "times");
           count += idToTimes.get(id);
@@ -86,7 +82,8 @@ public class Printer implements IPrinter {
    */
   private void printTopTenUsers() {
     Collections.sort(allClients);
-    for (int i = 0; i < 10; i++) {
+    int printNum = allClients.size() >= 10 ? 10 : allClients.size();
+    for (int i = 0; i < printNum; i++) {
       System.out.println((i + 1) + ": " + allClients.get(i).getClientId());
       System.out.println("\ttotal transactionTimes: " + allClients.get(i).getTransactionTimes());
     }

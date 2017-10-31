@@ -58,4 +58,9 @@ public class ClientTest {
     ITransactionVerification tst = new TransactionVerification();
     Assert.assertEquals(false, client1.equals(tst));
   }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void testCompareTo() {
+    client1.compareTo(null);
+  }
 }
